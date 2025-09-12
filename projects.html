@@ -1,447 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Projects - Praveen Yadav</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="css/proj.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Praveen Yadav</title>
+    <meta name="description" content="A comprehensive archive of projects by Praveen Yadav, including web development, UI/UX design, and research.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
-  <!-- Custom Cursor -->
-  <div class="custom-cursor"></div>
+<body class="dark-theme">
+    <div class="custom-cursor"></div>
 
-  <div class="container">
-    <!-- Header -->
-    <header class="header">
-      <div class="header-content">
-        <a href="index.html" class="back-link">
-          <i class="fas fa-arrow-left"></i> Back to Home
-        </a>
-        <h1 class="page-title">All Projects</h1>
-        <a href="#" class="resume-link">
-          View Full Résumé <i class="fas fa-external-link-alt"></i>
-        </a>
-      </div>
-    </header>
+    <div class="container-full-width">
+        <header class="page-header">
+            <a href="index.html" class="header-logo">Praveen Yadav</a>
+            <nav class="header-nav">
+                <a href="index.html">Home</a>
+                <a href="projects.html" class="active">Projects</a>
+                <a href="blog.html">Blog</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+            <div class="header-actions">
+                <a href="https://github.com/praveenyadavofficial" target="_blank" aria-label="GitHub" class="social-icon"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/praveenyadavofficial/" target="_blank" aria-label="LinkedIn" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                <div class="separator"></div>
+                <button id="theme-toggle" class="theme-toggle button-3d" aria-label="Toggle theme">
+                    <i class="fas fa-sun"></i>
+                </button>
+            </div>
+        </header>
 
-    <!-- Main Content -->
-    <main class="main-content">
-      <div class="page-description fade-in">
-        <p>A comprehensive collection of my work spanning web development, UI/UX design, digital research, and creative
-          projects. Each project represents a unique challenge and solution, showcasing different aspects of my
-          technical and creative capabilities.</p>
-      </div>
+        <main class="main-content-full">
+            <div class="page-intro fade-in">
+                <h1 class="page-title">All Projects</h1>
+                <p class="page-description">A collection of my work in web development, design, and research. Each project represents a unique challenge and a step in my journey as a developer and creator.</p>
+            </div>
 
-      <!-- Category Filters -->
-      <div class="category-filters fade-in">
-        <button class="filter-btn active" data-category="all">All Projects</button>
-        <button class="filter-btn" data-category="web-dev">Web Development</button>
-        <button class="filter-btn" data-category="ui-ux">UI/UX Design</button>
-        <button class="filter-btn" data-category="research">Research</button>
-        <button class="filter-btn" data-category="creative">Creative</button>
-        <button class="filter-btn" data-category="civic-tech">Civic Tech</button>
-      </div>
+            <div class="category-filters fade-in">
+                <button class="filter-btn button-3d active" data-category="all">All</button>
+                <button class="filter-btn button-3d" data-category="web-dev">Web Dev</button>
+                <button class="filter-btn button-3d" data-category="ui-ux">UI/UX</button>
+                <button class="filter-btn button-3d" data-category="research">Research</button>
+                <button class="filter-btn button-3d" data-category="creative">Creative</button>
+                <button class="filter-btn button-3d" data-category="civic-tech">Civic Tech</button>
+            </div>
 
-      <!-- Projects Grid -->
-      <div class="projects-grid">
-        <!-- Avoneme Creative Studio -->
-        <div class="project-item fade-in" data-category="web-dev ui-ux">
-          <div class="project-image">
-            <img src="images/project/avoneme.jpg" alt="Avoneme Creative Studio">
-            <div class="project-status status-in-progress">In Progress</div>
-          </div>
-          <div class="project-content">
-            <div class="project-header">
-              <a href="avoneme.html" class="project-title">
-                Avoneme Creative Studio <i class="fas fa-external-link-alt"></i>
-              </a>
-              <div class="project-year">2025 — Present</div>
-            </div>
-            <p class="project-description">A comprehensive creative agency platform offering web development, UI/UX
-              design, and video editing services. Built with modern web technologies and focuses on delivering
-              high-quality digital experiences for diverse clientele.</p>
-            <div class="project-features">
-              <h4>Key Features:</h4>
-              <ul>
-                <li>Responsive design across all devices</li>
-                <li>Interactive portfolio showcase</li>
-                <li>Client project management system</li>
-                <li>Service booking and consultation forms</li>
-              </ul>
-            </div>
-            <div class="project-tags">
-              <span class="project-tag">React</span>
-              <span class="project-tag">Node.js</span>
-              <span class="project-tag">UI/UX Design</span>
-              <span class="project-tag">Creative Direction</span>
-            </div>
-            <div class="project-links">
-              <a href="avoneme.html" class="project-link">
-                View Details <i class="fas fa-arrow-right"></i>
-              </a>
-              <a href="#" class="project-link">
-                Live Site <i class="fas fa-external-link-alt"></i>
-              </a>
-            </div>
-          </div>
-        </div>
+            <div class="projects-grid">
+                <!-- Avoneme Creative Studio -->
+                <a href="avoneme.html" class="project-card-link">
+                    <div class="project-card fade-in" data-category="web-dev ui-ux">
+                        <div class="project-image"><img src="images/project/avoneme.jpg" alt="Avoneme Creative Studio"></div>
+                        <div class="project-content">
+                            <h3 class="project-title">Avoneme Creative Studio</h3>
+                            <p class="project-description">A creative agency platform offering web dev, UI/UX design, and video editing services.</p>
+                            <div class="project-tags"><span class="project-tag">React</span><span class="project-tag">Node.js</span></div>
+                        </div>
+                    </div>
+                </a>
 
-        <!-- SolveMyIndia Platform -->
-        <div class="project-item fade-in" data-category="web-dev civic-tech">
-          <div class="project-image">
-            <img src="images/project/solvemyindia.jpg" alt="SolveMyIndia Platform">
-            <div class="project-status status-launching-soon">Launching Soon</div>
-          </div>
-          <div class="project-content">
-            <div class="project-header">
-              <a href="solvemyindia.html" class="project-title">
-                SolveMyIndia Platform <i class="fas fa-external-link-alt"></i>
-              </a>
-              <div class="project-year">2025 — Present</div>
-            </div>
-            <p class="project-description">A civic-tech platform empowering youth to propose innovative solutions to
-              India's challenges through democratic voting and community engagement. Features real-time discussions,
-              proposal tracking, and impact measurement.</p>
-            <div class="project-features">
-              <h4>Key Features:</h4>
-              <ul>
-                <li>Democratic proposal submission and voting</li>
-                <li>Real-time chat and discussion forums</li>
-                <li>User authentication and profile management</li>
-                <li>Impact tracking and analytics dashboard</li>
-              </ul>
-            </div>
-            <div class="project-tags">
-              <span class="project-tag">React</span>
-              <span class="project-tag">Express</span>
-              <span class="project-tag">MongoDB</span>
-              <span class="project-tag">Socket.io</span>
-              <span class="project-tag">Civic Tech</span>
-            </div>
-            <div class="project-links">
-              <a href="solvemyindia.html" class="project-link">
-                View Details <i class="fas fa-arrow-right"></i>
-              </a>
-              <a href="#" class="project-link">
-                GitHub <i class="fab fa-github"></i>
-              </a>
-            </div>
-          </div>
-        </div>
+                <!-- SolveMyIndia Platform -->
+                <a href="solvemyindia.html" class="project-card-link">
+                    <div class="project-card fade-in" data-category="web-dev civic-tech">
+                        <div class="project-image"><img src="images/project/solvemyindia.jpg" alt="SolveMyIndia Platform"></div>
+                        <div class="project-content">
+                            <h3 class="project-title">SolveMyIndia Platform</h3>
+                            <p class="project-description">A civic-tech platform for youth to propose and vote on solutions to India's challenges.</p>
+                            <div class="project-tags"><span class="project-tag">React</span><span class="project-tag">MongoDB</span></div>
+                        </div>
+                    </div>
+                </a>
 
-        <!-- Social Media Impact Study -->
-        <div class="project-item fade-in" data-category="research ui-ux">
-          <div class="project-image">
-            <img src="images/project/socialmediaimpact.jpg" alt="Social Media Impact Study">
-            <div class="project-status status-ongoing">Ongoing</div>
-          </div>
-          <div class="project-content">
-            <div class="project-header">
-              <a href="social-media-impact.html" class="project-title">
-                Social Media Impact Study <i class="fas fa-external-link-alt"></i>
-              </a>
-              <div class="project-year">2025</div>
-            </div>
-            <p class="project-description">A comprehensive digital research publication studying "Social Media Impact on
-              Rural Kids" - analyzing rural youth mindset and digital influence patterns through data-driven insights
-              and interactive visualizations.</p>
-            <div class="project-features">
-              <h4>Research Highlights:</h4>
-              <ul>
-                <li>Survey of 500+ rural youth participants</li>
-                <li>Interactive data visualization dashboard</li>
-                <li>Behavioral pattern analysis</li>
-                <li>Policy recommendations for digital literacy</li>
-              </ul>
-            </div>
-            <div class="project-tags">
-              <span class="project-tag">Data Analysis</span>
-              <span class="project-tag">D3.js</span>
-              <span class="project-tag">Research</span>
-              <span class="project-tag">Digital Publishing</span>
-              <span class="project-tag">Social Impact</span>
-            </div>
-            <div class="project-links">
-              <a href="social-media-impact.html" class="project-link">
-                Read Study <i class="fas fa-arrow-right"></i>
-              </a>
-              <a href="#" class="project-link">
-                Download PDF <i class="fas fa-download"></i>
-              </a>
-            </div>
-          </div>
-        </div>
+                <!-- Social Media Impact Study -->
+                <a href="social-media-impact.html" class="project-card-link">
+                    <div class="project-card fade-in" data-category="research ui-ux">
+                        <div class="project-image"><img src="images/project/socialmediaimpact.jpg" alt="Social Media Impact Study"></div>
+                        <div class="project-content">
+                            <h3 class="project-title">Social Media Impact Study</h3>
+                            <p class="project-description">A digital research publication analyzing social media's impact on rural youth.</p>
+                            <div class="project-tags"><span class="project-tag">Data Analysis</span><span class="project-tag">D3.js</span></div>
+                        </div>
+                    </div>
+                </a>
+                
+                <!-- Rural Outreach Workshops -->
+                <a href="rural-workshops.html" class="project-card-link">
+                    <div class="project-card fade-in" data-category="creative civic-tech">
+                        <div class="project-image"><img src="images/project/ruralworkshops.jpg" alt="Rural Outreach Workshops"></div>
+                        <div class="project-content">
+                            <h3 class="project-title">Rural Outreach Workshops</h3>
+                            <p class="project-description">An outreach initiative conducting tech-literacy workshops in underserved rural areas.</p>
+                            <div class="project-tags"><span class="project-tag">Community</span><span class="project-tag">Education</span></div>
+                        </div>
+                    </div>
+                </a>
 
-        <!-- Rural Workshops -->
-        <div class="project-item fade-in" data-category="outreach education">
-          <div class="project-image">
-            <img src="images/project/ruralworkshops.jpg" alt="Rural Outreach Workshops">
-            <div class="project-status status-ongoing">Ongoing</div>
-          </div>
-          <div class="project-content">
-            <div class="project-header">
-              <a href="rural-workshops.html" class="project-title">
-                Rural Outreach Workshops <i class="fas fa-external-link-alt"></i>
-              </a>
-              <div class="project-year">2025</div>
-            </div>
-            <p class="project-description">An outreach initiative conducting tech-literacy and awareness workshops in
-              underserved rural areas, focused on education, innovation, and youth empowerment.</p>
-            <div class="project-features">
-              <h4>Workshop Highlights:</h4>
-              <ul>
-                <li>Workshops in 10+ rural villages</li>
-                <li>Topics: Digital literacy, career paths, clean tech</li>
-                <li>Conducted by student volunteers & local educators</li>
-                <li>Interactive hands-on sessions & feedback loops</li>
-              </ul>
-            </div>
-            <div class="project-tags">
-              <span class="project-tag">Rural Education</span>
-              <span class="project-tag">Workshops</span>
-              <span class="project-tag">Youth Empowerment</span>
-              <span class="project-tag">Community Impact</span>
-              <span class="project-tag">Social Initiative</span>
-            </div>
-            <div class="project-links">
-              <a href="rural-workshops.html" class="project-link">
-                View Project <i class="fas fa-arrow-right"></i>
-              </a>
-              <a href="#" class="project-link">
-                Download Report <i class="fas fa-download"></i>
-              </a>
-            </div>
-          </div>
-        </div>
+                <!-- People of India Magazine -->
+                <a href="people-of-india-magazine.html" class="project-card-link">
+                    <div class="project-card fade-in" data-category="creative">
+                        <div class="project-image"><img src="images/project/pplofind.png" alt="People of India Magazine"></div>
+                        <div class="project-content">
+                            <h3 class="project-title">People of India Magazine</h3>
+                            <p class="project-description">A digital magazine featuring interviews with auto drivers, vendors, and everyday heroes.</p>
+                            <div class="project-tags"><span class="project-tag">Editorial Design</span><span class="project-tag">Storytelling</span></div>
+                        </div>
+                    </div>
+                </a>
 
+                <!-- E-Commerce Dashboard -->
+                <a href="coming-soon.html" class="project-card-link">
+                    <div class="project-card fade-in" data-category="web-dev ui-ux">
+                        <div class="project-image"><img src="images/project/e-com.png" alt="E-Commerce Analytics Dashboard"></div>
+                        <div class="project-content">
+                            <h3 class="project-title">E-Commerce Dashboard</h3>
+                            <p class="project-description">An admin dashboard featuring analytics, inventory management, and customer insights.</p>
+                            <div class="project-tags"><span class="project-tag">React</span><span class="project-tag">Chart.js</span></div>
+                        </div>
+                    </div>
+                </a>
 
-        <!-- People of India Magazine -->
-        <div class="project-item fade-in" data-category="creative ui-ux">
-          <div class="project-image">
-            <img src="images/project/pplofind.png" alt="People of India Magazine">
-            <div class="project-status status-publishing-soon">Publishing Soon</div>
+                <!-- NGO Management Platform -->
+                <a href="coming-soon.html" class="project-card-link">
+                    <div class="project-card fade-in" data-category="web-dev civic-tech">
+                        <div class="project-image"><img src="images/project/ngo-man.png" alt="NGO Management Platform"></div>
+                        <div class="project-content">
+                            <h3 class="project-title">NGO Management Platform</h3>
+                            <p class="project-description">A platform for NGOs to manage volunteers, track donations, and organize events.</p>
+                            <div class="project-tags"><span class="project-tag">Vue.js</span><span class="project-tag">Laravel</span></div>
+                        </div>
+                    </div>
+                </a>
 
-          </div>
-          <div class="project-content">
-            <div class="project-header">
-              <a href="people-of-india-magazine.html" class="project-title">
-                People of India Magazine <i class="fas fa-external-link-alt"></i>
-              </a>
-              <div class="project-year">2025</div>
+                <!-- AI Content Generator -->
+                <a href="coming-soon.html" class="project-card-link">
+                    <div class="project-card fade-in" data-category="web-dev">
+                        <div class="project-image"><img src="images/project/ai-content-gen.png" alt="AI Content Generator"></div>
+                        <div class="project-content">
+                            <h3 class="project-title">AI Content Generator</h3>
+                            <p class="project-description">An AI-powered tool that helps creators overcome writer's block by suggesting ideas and outlines.</p>
+                            <div class="project-tags"><span class="project-tag">Python</span><span class="project-tag">Next.js</span></div>
+                        </div>
+                    </div>
+                </a>
             </div>
-            <p class="project-description">A 15-page digital magazine series featuring interviews with auto drivers,
-              vendors, and everyday heroes, showcasing their vital role in India's growth through compelling
-              storytelling and original graphics.</p>
-            <div class="project-features">
-              <h4>Magazine Features:</h4>
-              <ul>
-                <li>15 in-depth interviews with working professionals</li>
-                <li>Original photography and illustrations</li>
-                <li>Interactive digital reading experience</li>
-                <li>Multi-language accessibility options</li>
-              </ul>
-            </div>
-            <div class="project-tags">
-              <span class="project-tag">Editorial Design</span>
-              <span class="project-tag">Photography</span>
-              <span class="project-tag">Storytelling</span>
-              <span class="project-tag">Adobe Creative Suite</span>
-              <span class="project-tag">Digital Publishing</span>
-            </div>
-            <div class="project-links">
-              <a href="people-of-india-magazine.html" class="project-link">
-                Read Magazine <i class="fas fa-arrow-right"></i>
-              </a>
-              <a href="#" class="project-link">
-                View Gallery <i class="fas fa-images"></i>
-              </a>
-            </div>
-          </div>
-        </div>
+        </main>
+    </div>
 
-        <!-- E-Commerce Dashboard -->
-        <div class="project-item fade-in" data-category="web-dev ui-ux">
-          <div class="project-image">
-            <img src="images/project/e-com.png" alt="E-Commerce Analytics Dashboard">
-            <div class="project-status status-completed">Completed</div>
-          </div>
-          <div class="project-content">
-            <div class="project-header">
-              <a href="coming-soon.html" class="project-title">
-                E-Commerce Analytics Dashboard <i class="fas fa-external-link-alt"></i>
-              </a>
-              <div class="project-year">2025</div>
-            </div>
-            <p class="project-description">A comprehensive admin dashboard for e-commerce businesses featuring real-time
-              analytics, inventory management, and customer insights. Built with modern React patterns and responsive
-              design principles.</p>
-            <div class="project-features">
-              <h4>Dashboard Features:</h4>
-              <ul>
-                <li>Real-time sales and revenue tracking</li>
-                <li>Interactive charts and data visualization</li>
-                <li>Inventory management system</li>
-                <li>Customer behavior analytics</li>
-              </ul>
-            </div>
-            <div class="project-tags">
-              <span class="project-tag">React</span>
-              <span class="project-tag">TypeScript</span>
-              <span class="project-tag">Chart.js</span>
-              <span class="project-tag">Tailwind CSS</span>
-              <span class="project-tag">REST API</span>
-            </div>
-            <div class="project-links">
-              <a href="coming-soon.html" class="project-link">
-                Live Demo <i class="fas fa-arrow-right"></i>
-              </a>
-              <a href="#" class="project-link">
-                GitHub <i class="fab fa-github"></i>
-              </a>
-            </div>
-          </div>
-        </div>
+    <div id="image-modal" class="modal">
+        <span class="modal-close-btn">&times;</span>
+        <img class="modal-content" id="modal-image">
+        <div id="modal-caption"></div>
+    </div>
 
-        <!-- NGO Management System -->
-        <div class="project-item fade-in" data-category="web-dev civic-tech">
-          <div class="project-image">
-            <img src="images/project/ngo-man.png" alt="NGO Management Platform">
-            <div class="project-status status-concept">Concept</div>
-          </div>
-          <div class="project-content">
-            <div class="project-header">
-              <a href="coming-soon.html" class="project-title">
-                NGO Management Platform <i class="fas fa-external-link-alt"></i>
-              </a>
-              <div class="project-year">2025 — Present</div>
-            </div>
-            <p class="project-description">A comprehensive platform for NGOs to manage volunteers, track donations,
-              organize events, and measure social impact. Features volunteer scheduling, donation tracking, and impact
-              reporting.</p>
-            <div class="project-features">
-              <h4>Platform Features:</h4>
-              <ul>
-                <li>Volunteer management and scheduling</li>
-                <li>Donation tracking and reporting</li>
-                <li>Event organization and RSVP system</li>
-                <li>Impact measurement and visualization</li>
-              </ul>
-            </div>
-            <div class="project-tags">
-              <span class="project-tag">Vue.js</span>
-              <span class="project-tag">Laravel</span>
-              <span class="project-tag">MySQL</span>
-              <span class="project-tag">Payment Integration</span>
-              <span class="project-tag">Social Impact</span>
-            </div>
-            <div class="project-links">
-              <a href="coming-soon.html" class="project-link">
-                Case Study <i class="fas fa-arrow-right"></i>
-              </a>
-              <a href="#" class="project-link">
-                Live Site <i class="fas fa-external-link-alt"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Personal Portfolio Website
-        <div class="project-item fade-in" data-category="web-dev ui-ux">
-          <div class="project-image">
-            <img src="avoneme..png" alt="Personal Portfolio Website">
-            <div class="project-status status-versioned">V2.0</div>
-          </div>
-          <div class="project-content">
-            <div class="project-header">
-              <a href="#" class="project-title">
-                Personal Portfolio Website <i class="fas fa-external-link-alt"></i>
-              </a>
-              <div class="project-year">2024</div>
-            </div>
-            <p class="project-description">A modern, interactive portfolio website showcasing my work and skills.
-              Features custom animations, dynamic content loading, and a unique mouse-following glow effect for enhanced
-              user experience.</p>
-            <div class="project-features">
-              <h4>Design Features:</h4>
-              <ul>
-                <li>Custom mouse-following glow effect</li>
-                <li>Smooth scrolling and navigation</li>
-                <li>Responsive design across all devices</li>
-                <li>Performance-optimized animations</li>
-              </ul>
-            </div>
-            <div class="project-tags">
-              <span class="project-tag">HTML5</span>
-              <span class="project-tag">CSS3</span>
-              <span class="project-tag">JavaScript</span>
-              <span class="project-tag">GSAP</span>
-              <span class="project-tag">UI/UX</span>
-            </div>
-            <div class="project-links">
-              <a href="#" class="project-link">
-                View Site <i class="fas fa-arrow-right"></i>
-              </a>
-              <a href="#" class="project-link">
-                GitHub <i class="fab fa-github"></i>
-              </a>
-            </div>
-          </div>
-        </div> -->
-
-        <!-- AI Content Generator -->
-        <div class="project-item fade-in" data-category="web-dev">
-          <div class="project-image">
-            <img src="images/project/ai-content-gen.png" alt="AI Content Generator">
-            <div class="project-status status-concept">Concept</div>
-          </div>
-          <div class="project-content">
-            <div class="project-header">
-              <a href="coming-soon.html" class="project-title">
-                AI Content Generator <i class="fas fa-external-link-alt"></i>
-              </a>
-              <div class="project-year">2024</div>
-            </div>
-            <p class="project-description">An AI-powered content generation tool that helps creators overcome writer's
-              block by suggesting ideas, outlines, and complete drafts based on minimal input. Integrates with popular
-              writing platforms.</p>
-            <div class="project-features">
-              <h4>Planned Features:</h4>
-              <ul>
-                <li>AI-powered content suggestions</li>
-                <li>Customizable tone and style options</li>
-                <li>Integration with writing platforms</li>
-                <li>Collaborative editing features</li>
-              </ul>
-            </div>
-            <div class="project-tags">
-              <span class="project-tag">Python</span>
-              <span class="project-tag">Next.js</span>
-              <span class="project-tag">OpenAI API</span>
-              <span class="project-tag">Machine Learning</span>
-            </div>
-            <div class="project-links">
-              <a href="coming-soon.html" class="project-link">
-                View Prototype <i class="fas fa-arrow-right"></i>
-              </a>
-              <a href="#" class="project-link">
-                GitHub <i class="fab fa-github"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </main>
-  </div>
-
-  <script src="js/proj.js"></script>
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
 </body>
-
 </html>

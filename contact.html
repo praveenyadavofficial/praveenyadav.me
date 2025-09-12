@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Praveen Yadav</title>
+    <meta name="description" content="Get in touch with Praveen Yadav to discuss projects, collaborations, or other inquiries.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="dark-theme">
+    <div class="custom-cursor"></div>
+    <div class="container-full-width">
+        <header class="page-header">
+            <a href="index.html" class="header-logo">Praveen Yadav</a>
+            <nav class="header-nav">
+                <a href="index.html">Home</a>
+                <a href="projects.html">Projects</a>
+                <a href="blog.html">Blog</a>
+                <a href="contact.html" class="active">Contact</a>
+            </nav>
+            <div class="header-actions">
+                <a href="https://github.com/praveenyadav-admin" target="_blank" aria-label="GitHub" class="social-icon"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/praveen-yadav333/" target="_blank" aria-label="LinkedIn" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                <div class="separator"></div>
+                <button id="theme-toggle" class="theme-toggle button-3d" aria-label="Toggle theme"><i class="fas fa-sun"></i></button>
+            </div>
+        </header>
+        <main class="main-content-full">
+            <div class="page-intro fade-in">
+                <h1 class="page-title">Get In Touch</h1>
+                <p class="page-description">I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision. Feel free to reach out.</p>
+            </div>
+            <div class="contact-layout fade-in">
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <p>Fill out the form or reach out via the links below. I'll do my best to get back to you as soon as possible!</p>
+                    <div class="contact-details">
+                        <a href="mailto:work.praveenyadav@gmail.com" class="contact-item"><i class="fas fa-envelope"></i><span>work.praveenyadav@gmail.com</span></a>
+                        <div class="contact-item"><i class="fas fa-map-marker-alt"></i><span>Lucknow, India</span></div>
+                    </div>
+                    <div class="contact-socials">
+                        <a href="https://github.com/praveenyadavofficial" target="_blank" aria-label="GitHub" class="social-icon-large"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/praveenyadavofficial/" target="_blank" aria-label="LinkedIn" class="social-icon-large"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://instagram.com/itsjustpraveen" target="_blank" aria-label="Instagram" class="social-icon-large"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="contact-form-card">
+                    <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+                        <input type="hidden" name="access_key" value="7983c822-32b0-432f-b7b3-ccc30b6f94da">
+                        <div class="form-group"><label for="name">Full Name</label><input type="text" id="name" name="name" required></div>
+                        <div class="form-group"><label for="email">Email Address</label><input type="email" id="email" name="email" required></div>
+                        <div class="form-group"><label for="subject">Subject</label><input type="text" id="subject" name="subject" required></div>
+                        <div class="form-group"><label for="message">Message</label><textarea id="message" name="message" rows="5" required></textarea></div>
+                        <button type="submit" class="button-3d form-submit-btn">Send Message <i class="fas fa-paper-plane"></i></button>
+                    </form>
+                    <div id="formStatus"></div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>

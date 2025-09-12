@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Building Design Systems That Scale - Praveen Yadav</title>
+    <meta name="description" content="Learnings from creating and maintaining design systems, including component architecture and documentation strategies.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="dark-theme">
+    <div class="custom-cursor"></div>
+
+    <div class="container-full-width">
+        <!-- Standard Frosted Glass Navbar -->
+        <header class="page-header">
+            <a href="index.html" class="header-logo">Praveen Yadav</a>
+            <nav class="header-nav">
+                <a href="index.html">Home</a>
+                <a href="projects.html">Projects</a>
+                <a href="blog.html" class="active">Blog</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+            <div class="header-actions">
+                <a href="https://github.com/praveenyadavofficial" target="_blank" aria-label="GitHub" class="social-icon"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/praveenyadavofficial/" target="_blank" aria-label="LinkedIn" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                <div class="separator"></div>
+                <button id="theme-toggle" class="theme-toggle button-3d" aria-label="Toggle theme">
+                    <i class="fas fa-sun"></i>
+                </button>
+            </div>
+        </header>
+
+        <main class="main-content-full">
+            <article class="blog-article-content">
+                <!-- Article Header -->
+                <header class="blog-article-header fade-in">
+                    <h1 class="blog-post-title">Building Design Systems That Scale</h1>
+                    <div class="blog-post-meta">
+                        <span class="author-name">By Praveen Yadav</span>
+                        <span class="meta-separator">·</span>
+                        <time datetime="2025-08-28">August 28, 2025</time>
+                        <span class="meta-separator">·</span>
+                        <span class="read-time"><i class="fas fa-clock"></i> 6 min read</span>
+                    </div>
+                    <span class="blog-card-category design">Design</span>
+                </header>
+
+                <!-- Article Hero Image -->
+                <figure class="blog-hero-image fade-in">
+                    <div class="project-image">
+                        <img src="images/project/designsystem.png" alt="Abstract representation of a design system.">
+                    </div>
+                </figure>
+
+                <!-- Article Body -->
+                <section class="blog-post-body fade-in">
+                    <p>A design system is more than a UI kit or a style guide; it's a living ecosystem that unifies product teams around a common visual language. When built correctly, it accelerates development, eliminates inconsistency, and allows teams to focus on solving user problems instead of reinventing the button. But how do you create one that scales with your organization?</p>
+                    
+                    <h2>1. Start with a Solid Foundation: Design Tokens</h2>
+                    <p>Before you build a single component, you need to define your primitives. Design tokens are the atoms of your design system—named entities that store your visual design choices. These include colors, fonts, spacing units, and shadows. By centralizing these values, you create a single source of truth that can be used across all platforms.</p>
+                    <blockquote>Tokens are the contract between design and development. They ensure that a value like `primary-blue` means the same thing in a Figma file as it does in a React component.</blockquote>
+<pre><code>/* tokens.json */
+{
+  "color": {
+    "brand": {
+      "primary": { "value": "#3B82F6" }
+    }
+  },
+  "spacing": {
+    "md": { "value": "16px" }
+  }
+}</code></pre>
+
+                    <h2>2. Component Architecture: Smart vs. Dumb Components</h2>
+                    <p>A scalable system relies on a clear component hierarchy. A common and effective pattern is to separate components into two categories:</p>
+                    <ul>
+                        <li><strong>Dumb (or Presentational) Components:</strong> These are the basic building blocks. Think `Button`, `Input`, `Avatar`. They know nothing about the application's state; they simply receive props and render UI. They are highly reusable.</li>
+                        <li><strong>Smart (or Container) Components:</strong> These components are concerned with how things work. They fetch data, manage state, and then pass that information down to the dumb components to be displayed. A `UserProfileCard` might be a smart component that fetches user data and then uses dumb `Avatar` and `Button` components to render it.</li>
+                    </ul>
+                    <p>This separation makes your system easier to test, maintain, and reason about as it grows in complexity.</p>
+
+                    <h2>3. Documentation is Not an Afterthought</h2>
+                    <p>A design system that isn't documented is just a folder of components that no one knows how to use. Your documentation is the user manual for your system, and it should be treated as a core product feature. Good documentation includes:</p>
+                    <ul>
+                        <li>Live, interactive examples of each component.</li>
+                        <li>Clear guidelines on when and when *not* to use a component.</li>
+                        <li>Props tables with types, descriptions, and default values.</li>
+                        <li>Notes on accessibility and best practices.</li>
+                    </ul>
+                    <p>Tools like Storybook or Zeroheight are invaluable for creating and maintaining this living documentation.</p>
+                </section>
+            </article>
+
+            <!-- Blog Navigation -->
+            <nav class="blog-navigation fade-in">
+                <a href="modern-css-techniques.html" class="nav-button button-3d prev">
+                    <i class="fas fa-arrow-left"></i> Previous Article
+                </a>
+                <a href="blog.html" class="back-to-archive">
+                    <i class="fas fa-th-large"></i> Back to Blog Archive
+                </a>
+                <a href="varanasi-tech-scene.html" class="nav-button button-3d next">
+                    Next Article <i class="fas fa-arrow-right"></i>
+                </a>
+            </nav>
+        </main>
+    </div>
+    
+    <script src="js/script.js"></script>
+</body>
+</html>

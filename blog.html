@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Praveen Yadav</title>
+    <meta name="description" content="Thoughts, insights, and experiences on web development, design, and technology from Praveen Yadav.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="dark-theme">
+    <div class="custom-cursor"></div>
+
+    <div class="container-full-width">
+        <!-- Navbar is unchanged -->
+        <header class="page-header">
+            <a href="index.html" class="header-logo">Praveen Yadav</a>
+            <nav class="header-nav">
+                <a href="index.html">Home</a>
+                <a href="projects.html">Projects</a>
+                <a href="blog.html" class="active">Blog</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+            <div class="header-actions">
+                <a href="https://github.com/praveenyadavofficial" target="_blank" aria-label="GitHub" class="social-icon"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/praveenyadavofficial/" target="_blank" aria-label="LinkedIn" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                <div class="separator"></div>
+                <button id="theme-toggle" class="theme-toggle button-3d" aria-label="Toggle theme">
+                    <i class="fas fa-sun"></i>
+                </button>
+            </div>
+        </header>
+
+        <main class="main-content-full">
+            <div class="page-intro fade-in">
+                <h1 class="page-title">Digital Journal</h1>
+                <p class="page-description">Thoughts on development, design, and the ever-evolving landscape of technology.</p>
+            </div>
+
+            <!-- Filters and search are unchanged -->
+            <div class="blog-controls fade-in">
+                <div class="blog-filters">
+                    <a href="#" class="blog-filter-link active" data-filter="all">All</a>
+                    <a href="#" class="blog-filter-link" data-filter="tech">Tech</a>
+                    <a href="#" class="blog-filter-link" data-filter="design">Design</a>
+                    <a href="#" class="blog-filter-link" data-filter="local">Local</a>
+                </div>
+                <div class="blog-search">
+                    <input type="text" id="blogSearchInput" placeholder="Search posts..." autocomplete="off">
+                    <i class="fas fa-search"></i>
+                </div>
+            </div>
+
+            <!-- NEW Redesigned Blog List Layout -->
+            <div class="blog-post-list" id="blogPostsContainer">
+                <!-- Post 1 -->
+                <a href="modern-css-techniques.html" class="blog-card-link fade-in">
+                    <div class="blog-post-card" data-category="tech">
+                        <div class="blog-post-card-image">
+                            <img src="images/project/css.png" alt="Abstract visualization of code on a screen">
+                        </div>
+                        <div class="blog-post-card-content">
+                            <div class="blog-card-meta">
+                                <span class="blog-card-category tech">Tech</span>
+                                <span class="meta-separator">·</span>
+                                <span class="blog-card-date">September 10, 2025</span>
+                            </div>
+                            <h3 class="blog-card-title">Modern CSS Techniques for Better UI</h3>
+                            <p class="blog-card-excerpt">Exploring advanced CSS features like container queries, cascade layers, and modern layout techniques that are transforming how we build UIs.</p>
+                            <div class="read-more-link">Read Article <i class="fas fa-arrow-right"></i></div>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Post 2 -->
+                <a href="design-systems-scale.html" class="blog-card-link fade-in">
+                    <div class="blog-post-card" data-category="design">
+                        <div class="blog-post-card-image">
+                            <img src="images/project/designsystem1.png" alt="Abstract representation of a design system.">
+                        </div>
+                        <div class="blog-post-card-content">
+                             <div class="blog-card-meta">
+                                <span class="blog-card-category design">Design</span>
+                                <span class="meta-separator">·</span>
+                                <span class="blog-card-date">August 28, 2025</span>
+                            </div>
+                            <h3 class="blog-card-title">Building Design Systems That Scale</h3>
+                            <p class="blog-card-excerpt">My learnings from creating and maintaining design systems across multiple projects, including component architecture and documentation strategies.</p>
+                            <div class="read-more-link">Read Article <i class="fas fa-arrow-right"></i></div>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Post 3 -->
+                <a href="varanasi-tech-scene.html" class="blog-card-link fade-in">
+                    <div class="blog-post-card" data-category="local">
+                        <div class="blog-post-card-image">
+                            <img src="images/project/varanasi-tech-scene.png" alt="Stylized image blending traditional Varanasi ghats with digital code.">
+                        </div>
+                        <div class="blog-post-card-content">
+                             <div class="blog-card-meta">
+                                <span class="blog-card-category local">Local</span>
+                                <span class="meta-separator">·</span>
+                                <span class="blog-card-date">August 15, 2025</span>
+                            </div>
+                            <h3 class="blog-card-title">The Growing Tech Scene in Varanasi</h3>
+                            <p class="blog-card-excerpt">Observations on the emerging technology ecosystem in one of India's oldest cities and the opportunities it presents for local developers.</p>
+                            <div class="read-more-link">Read Article <i class="fas fa-arrow-right"></i></div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- No Results Message -->
+            <div class="no-results" id="noResultsMessage" style="display: none;">
+                <h3>No posts found</h3>
+                <p>Try adjusting your search or filter.</p>
+            </div>
+        </main>
+    </div>
+
+    <div id="image-modal" class="modal">
+        <span class="modal-close-btn">&times;</span>
+        <img class="modal-content" id="modal-image">
+        <div id="modal-caption"></div>
+    </div>
+    
+    <script src="js/script.js"></script>
+</body>
+</html>

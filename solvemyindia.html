@@ -1,173 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Avoneme Creative Studio | Praveen Yadav</title>
+    <title>SolveMyIndia Platform - Project Details</title>
+    <meta name="description" content="Case study for the SolveMyIndia civic-tech platform, a project by Praveen Yadav.">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="css/solvemind.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
+<body class="dark-theme">
+    <div class="custom-cursor"></div>
 
-<body>
-    <!-- Project Hero Section -->
-    <section class="project-hero">
-        <div class="project-hero-content">
-            <div class="project-meta">
-                <span>Civic-Tech</span>
-                <span>UI/UX & Development</span>
-                <span>2025</span>
+    <div class="container-full-width">
+        <!-- Standard Frosted Glass Navbar -->
+        <header class="page-header">
+            <a href="index.html" class="header-logo">Praveen Yadav</a>
+            <nav class="header-nav">
+                <a href="index.html">Home</a>
+                <a href="projects.html" class="active">Projects</a>
+                <a href="blog.html">Blog</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+            <div class="header-actions">
+                <a href="https://github.com/praveenyadavofficial" target="_blank" aria-label="GitHub" class="social-icon"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/praveenyadavofficial/" target="_blank" aria-label="LinkedIn" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                <div class="separator"></div>
+                <button id="theme-toggle" class="theme-toggle button-3d" aria-label="Toggle theme">
+                    <i class="fas fa-sun"></i>
+                </button>
             </div>
-            <h1 class="project-title">SolveMyIndia</h1>
-            <p class="project-subtitle">
-                A civic-tech platform empowering Indian youth to share, vote, and solve real-world challenges — from
-                garbage issues to rockets.
-            </p>
+        </header>
 
-            <div class="project-hero-image">
-                <img src="images/project/solvemyindia.jpg" alt="SolveMyIndia Project Image">
-                <div
-                    style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;color:#555;font-size:1.5rem;">
-                    Project Hero Image
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Project Content Section -->
-    <section class="project-content">
-        <div class="project-section">
-            <h2 class="project-section-title">Project Overview</h2>
-            <p class="project-text">
-                SolveMyIndia is a civic-tech platform I conceptualized to give voice to Indian citizens, especially
-                students and young innovators. Users can post local and national problems, suggest creative solutions,
-                and vote on ideas that matter most.
-            </p>
-            <p class="project-text">
-                Built with a strong mission of participatory democracy, the platform features real-time discussion,
-                issue tagging, and a transparent voting mechanism — all designed to encourage youth-led change and
-                problem-solving at scale.
-            </p>
-
-            <div class="project-image-grid">
-                <div class="project-image">
-                    <div
-                        style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;color:#555;">
-                        uploading soon...
+        <main class="main-content-full">
+            <article class="project-page-content">
+                <!-- Project Hero Section -->
+                <section class="project-hero fade-in">
+                    <div class="project-hero-text">
+                        <h1 class="project-page-title">SolveMyIndia Platform</h1>
+                        <p class="project-page-tagline">A civic-tech platform empowering India's youth to crowdsource and vote on solutions for national challenges.</p>
                     </div>
-                </div>
-                <div class="project-image">
-                    <div
-                        style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;color:#555;">
-                        uploading soon...
+                    <aside class="project-details-card">
+                        <div class="detail-item"><strong>Role:</strong> Full-Stack Developer & UI/UX Designer</div>
+                        <div class="detail-item"><strong>Date:</strong> 2025 — Present</div>
+                        <div class="detail-item"><strong>Tech Stack:</strong> React, Express, MongoDB, Socket.io</div>
+                        <div class="detail-item"><strong>Status:</strong> <span class="status-badge status-launching-soon">Launching Soon</span></div>
+                        <a href="https://github.com/praveenyadav-admin" target="_blank" class="project-live-link button-3d">View on GitHub <i class="fab fa-github"></i></a>
+                    </aside>
+                </section>
+
+                <!-- Main Project Image -->
+                <figure class="project-main-image fade-in">
+                    <div class="project-image">
+                        <img src="images/project/solvemyindia.jpg" alt="The user interface for the SolveMyIndia platform.">
                     </div>
-                </div>
-            </div>
-        </div>
+                    <figcaption>The main dashboard where users can view and debate active proposals.</figcaption>
+                </figure>
 
-        <div class="project-section">
-            <h2 class="project-section-title">Key Features</h2>
-            <div class="project-features">
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-lightbulb"></i>
+                <!-- Project Content -->
+                <section class="project-content-section fade-in">
+                    <h2>Project Overview</h2>
+                    <p>SolveMyIndia is a non-profit initiative designed to bridge the gap between citizen-led ideas and policy-making. The platform provides a democratic space for young people to propose, discuss, and vote on solutions to pressing issues in India. My primary responsibility was to design and build the entire MERN stack application, focusing on real-time capabilities and a highly accessible user interface.</p>
+                    
+                    <h2>Key Features</h2>
+                    <ul>
+                        <li><strong>Democratic Proposal System:</strong> Registered users can submit detailed proposals, which are then open for public voting and debate.</li>
+                        <li><strong>Real-time Discussion Forums:</strong> Each proposal has a dedicated discussion thread powered by Socket.io, allowing for live chat and community engagement.</li>
+                        <li><strong>User Authentication & Profiles:</strong> A secure user management system allows individuals to track their proposals, votes, and contributions.</li>
+                        <li><strong>Impact & Analytics Dashboard:</strong> A feature for moderators to track proposal popularity, user engagement metrics, and generate reports on trending topics.</li>
+                    </ul>
+
+                    <h2>Technical Challenges</h2>
+                    <p>The main technical challenge was implementing a robust real-time voting and chat system at scale. Using Socket.io, I created a system of rooms for each proposal, ensuring that discussions were isolated and efficient. Another focus was on data integrity, preventing duplicate votes and ensuring the democratic process was fair and transparent. The UI was built with accessibility in mind (WCAG standards) to ensure the platform could be used by people of all abilities.</p>
+                </section>
+
+                <!-- Project Gallery -->
+                <section class="project-gallery fade-in">
+                    <h2>Visual Gallery</h2>
+                    <div class="gallery-grid">
+                        <figure class="project-image">
+                            <img src="https://placehold.co/600x400/1e1e1e/ffffff?text=Proposal+Submission+Form" alt="The multi-step proposal submission form">
+                        </figure>
+                        <figure class="project-image">
+                            <img src="https://placehold.co/600x400/1e1e1e/ffffff?text=User+Profile+Page" alt="A user's public profile page showing their activity">
+                        </figure>
                     </div>
-                    <h3 class="feature-title">Idea Submission</h3>
-                    <p class="feature-desc">
-                        Citizens submit real-life problems or innovative ideas in areas like waste, infrastructure,
-                        health, and tech.
-                    </p>
-                </div>
+                </section>
+            </article>
 
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-vote-yea"></i>
-                    </div>
-                    <h3 class="feature-title">Democratic Voting</h3>
-                    <p class="feature-desc">
-                        Real-time voting system to prioritize the most impactful and supported ideas by the community.
-                    </p>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-comments"></i>
-                    </div>
-                    <h3 class="feature-title">Discussion Forums</h3>
-                    <p class="feature-desc">
-                        Users engage in public discussions, refining ideas through feedback and collaborative
-                        suggestions.
-                    </p>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-user-graduate"></i>
-                    </div>
-                    <h3 class="feature-title">Youth Spotlight</h3>
-                    <p class="feature-desc">
-                        Special section to feature student-led solutions from rural and urban areas across India.
-                    </p>
-                </div>
-            </div>
-        </div>
-
-        <div class="project-section">
-            <h2 class="project-section-title">Technical Stack</h2>
-            <p class="project-text">
-                SolveMyIndia is a scalable MERN-based web platform built to handle real-time updates, voting, and
-                community forums. It’s also optimized for regional accessibility to ensure inclusivity across India.
-            </p>
-
-            <h3 class="project-section-title" style="font-size:1.2rem;margin-top:2rem;">Technologies Used</h3>
-            <div class="project-tech">
-                <span class="tech-item">MongoDB</span>
-                <span class="tech-item">Express</span>
-                <span class="tech-item">React</span>
-                <span class="tech-item">Node.js</span>
-                <span class="tech-item">Figma</span>
-                <span class="tech-item">Tailwind CSS</span>
-                <span class="tech-item">Socket.io</span>
-            </div>
-
-            <div class="project-image">
-                <div
-                    style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;color:#555;height:400px;">
-                    uploading soon...
-                </div>
-            </div>
-        </div>
-
-        <div class="project-section">
-            <h2 class="project-section-title">Results & Vision</h2>
-            <p class="project-text">
-                SolveMyIndia is still in its MVP phase, but has already attracted attention from peers, educators, and
-                social workers. The platform aims to onboard 5,000+ users, especially students from rural India during
-                my gap year outreach.
-            </p>
-            <p class="project-text">
-                This is more than a website — it's a movement. Through public feedback loops, NGO collaboration, and
-                tech-driven solutions, SolveMyIndia will grow into a national youth voice platform for change.
-            </p>
-        </div>
-    </section>
-
-    <!-- Project Navigation -->
-    <div class="project-nav">
-        <a href="avoneme.html">
-            <i class="fas fa-arrow-left"></i> Previous Project: Avoneme
-        </a>
-        <a href="social-media-impact.html">
-            Next Project <i class="fas fa-arrow-right"></i>
-        </a>
+            <!-- Project Navigation -->
+            <nav class="project-navigation fade-in">
+                <a href="avoneme.html" class="nav-button button-3d prev">
+                    <i class="fas fa-arrow-left"></i> Previous Project
+                </a>
+                <a href="projects.html" class="back-to-archive">
+                    <i class="fas fa-th-large"></i> Back to Archive
+                </a>
+                <a href="social-media-impact.html" class="nav-button button-3d next">
+                    Next Project <i class="fas fa-arrow-right"></i>
+                </a>
+            </nav>
+        </main>
     </div>
 
-
-    <script src="js/solvemind.js"></script>
+    <div id="image-modal" class="modal">
+        <span class="modal-close-btn">&times;</span>
+        <img class="modal-content" id="modal-image">
+        <div id="modal-caption"></div>
+    </div>
+    
+    <script src="js/script.js"></script>
 </body>
-
 </html>

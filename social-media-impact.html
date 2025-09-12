@@ -1,148 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Avoneme Creative Studio | Praveen Yadav</title>
+    <title>Social Media Impact Study - Project Details</title>
+    <meta name="description" content="A digital research publication studying the impact of social media on rural youth in India, a project by Praveen Yadav.">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="css/social-med.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Add Chart.js library -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
+<body class="dark-theme">
+    <div class="custom-cursor"></div>
 
-<body>
-   <!-- Project Hero Section -->
-<section class="project-hero">
-    <div class="project-hero-content">
-        <div class="project-meta">
-            <span>Research</span>
-            <span>Social Impact</span>
-            <span>2025</span>
-        </div>
-        <h1 class="project-title">The Impact of Social Media on Rural Youth</h1>
-        <p class="project-subtitle">
-            A research paper exploring how social media influences the mindset, education, habits, and aspirations of children in rural India.
-        </p>
-
-        <div class="project-hero-image">
-            <img src="images/project/socialmediaimpact.jpg" alt="Research Paper Hero Image">
-            <div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;color:#555;font-size:1.5rem;">
-                Research Paper Cover
+    <div class="container-full-width">
+        <!-- Standard Frosted Glass Navbar -->
+        <header class="page-header">
+            <a href="index.html" class="header-logo">Praveen Yadav</a>
+            <nav class="header-nav">
+                <a href="index.html">Home</a>
+                <a href="projects.html" class="active">Projects</a>
+                <a href="blog.html">Blog</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+            <div class="header-actions">
+                <a href="https://github.com/praveenyadavofficial" target="_blank" aria-label="GitHub" class="social-icon"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/praveenyadavofficial/" target="_blank" aria-label="LinkedIn" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                <div class="separator"></div>
+                <button id="theme-toggle" class="theme-toggle button-3d" aria-label="Toggle theme">
+                    <i class="fas fa-sun"></i>
+                </button>
             </div>
-        </div>
+        </header>
+
+        <main class="main-content-full">
+            <article class="project-page-content">
+                <!-- Project Hero Section -->
+                <section class="project-hero fade-in">
+                    <div class="project-hero-text">
+                        <h1 class="project-page-title">The Double-Edged Screen</h1>
+                        <p class="project-page-tagline">A digital research publication analyzing how social media is transforming the lives of youth in rural India.</p>
+                    </div>
+                    <aside class="project-details-card">
+                        <div class="detail-item"><strong>Role:</strong> Lead Researcher & Data Visualizer</div>
+                        <div class="detail-item"><strong>Date:</strong> 2025</div>
+                        <div class="detail-item"><strong>Tech Stack:</strong> Data Analysis, D3.js, Chart.js</div>
+                        <div class="detail-item"><strong>Status:</strong> <span class="status-badge status-ongoing">Ongoing</span></div>
+                        <a href="#" class="project-live-link button-3d">Read The Full Study <i class="fas fa-book-open"></i></a>
+                    </aside>
+                </section>
+                
+                <!-- RESTORED Main Project Image -->
+                <figure class="project-main-image fade-in">
+                    <div class="project-image">
+                        <img src="images/project/socialmediaimpact.jpg" alt="Data visualization from the Social Media Impact Study.">
+                    </div>
+                    <figcaption>An interactive data visualization dashboard built with D3.js to explore the research findings.</figcaption>
+                </figure>
+
+                <!-- VISUAL SUMMARY SECTION -->
+                <section class="project-content-section research-summary fade-in">
+                    <h2>Key Findings</h2>
+                    <div class="key-insight-card">
+                        <i class="fas fa-wifi"></i>
+                        <p>The core challenge has shifted from providing internet <strong>access</strong> to building digital <strong>resilience</strong>—teaching youth how to navigate the online world safely and effectively.</p>
+                    </div>
+                    <div class="two-sides-container">
+                        <div class="promise-column">
+                            <h3><i class="fas fa-check-circle"></i> The Promise: Opportunities</h3>
+                            <ul>
+                                <li><strong>Borderless Classroom:</strong> YouTube and other platforms act as vital educational tools.</li>
+                                <li><strong>Skill Building:</strong> Rise of "nano-entrepreneurs" using platforms like Instagram for business.</li>
+                                <li><strong>Social Connection:</strong> A lifeline for those in isolated areas to find support and reduce loneliness.</li>
+                            </ul>
+                        </div>
+                        <div class="perils-column">
+                            <h3><i class="fas fa-exclamation-triangle"></i> The Perils: Risks</h3>
+                            <ul>
+                                <li><strong>Mental Health Crisis:</strong> Strong links to increased anxiety, depression, and poor self-esteem (FOMO).</li>
+                                <li><strong>Algorithmic Addiction:</strong> Platforms designed for addiction lead to poor focus and academic decline.</li>
+                                <li><strong>A Hostile Web:</strong> Youth are often unprepared for cyberbullying and other online dangers.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- DATA INSIGHTS SECTION -->
+                <section class="project-content-section data-insights fade-in" id="dataInsights">
+                    <h2>Data Insights</h2>
+                    <div class="chart-grid">
+                        <div class="chart-card">
+                            <h4>Internet Users in India</h4>
+                            <canvas id="ruralUrbanChart"></canvas>
+                        </div>
+                        <div class="chart-card">
+                            <h4>Personal Smartphone Ownership (Ages 14-18)</h4>
+                            <canvas id="genderGapChart"></canvas>
+                        </div>
+                        <div class="chart-card">
+                            <h4>Top Platform Usage</h4>
+                            <canvas id="platformChart"></canvas>
+                        </div>
+                        <div class="chart-card">
+                            <h4>Reported Negative Impacts on Youth</h4>
+                            <canvas id="impactsChart"></canvas>
+                        </div>
+                    </div>
+                </section>
+                
+                <section class="project-content-section research-summary fade-in">
+                    <h2>The Path Forward</h2>
+                    <div class="path-forward-container">
+                        <div class="path-item">
+                            <i class="fas fa-landmark"></i>
+                            <h4>Policymakers</h4>
+                            <p>Integrate digital resilience (online safety, misinformation, mental health) into the national school curriculum.</p>
+                        </div>
+                        <div class="path-item">
+                            <i class="fas fa-cogs"></i>
+                            <h4>Tech Companies</h4>
+                            <p>Redesign platforms to prioritize user well-being over engagement and invest in moderation for regional languages.</p>
+                        </div>
+                        <div class="path-item">
+                            <i class="fas fa-users"></i>
+                            <h4>Educators & Parents</h4>
+                            <p>Foster open communication and work together to establish healthy boundaries for device usage.</p>
+                        </div>
+                    </div>
+                </section>
+            </article>
+
+            <!-- Project Navigation -->
+            <nav class="project-navigation fade-in">
+                <a href="solvemyindia.html" class="nav-button button-3d prev">
+                    <i class="fas fa-arrow-left"></i> Previous Project
+                </a>
+                <a href="projects.html" class="back-to-archive">
+                    <i class="fas fa-th-large"></i> Back to Archive
+                </a>
+                <a href="people-of-india-magazine.html" class="nav-button button-3d next">
+                    Next Project <i class="fas fa-arrow-right"></i>
+                </a>
+            </nav>
+        </main>
     </div>
-</section>
 
-<!-- Project Content Section -->
-<section class="project-content">
-    <div class="project-section">
-        <h2 class="project-section-title">Project Overview</h2>
-        <p class="project-text">
-            This research project was initiated during my school outreach programs in rural areas of Uttar Pradesh. I noticed a growing presence of smartphones and social media, even among young kids in villages.
-        </p>
-        <p class="project-text">
-            The paper examines the psychological, educational, and social effects of platforms like YouTube, WhatsApp, and Instagram on rural students aged 10–16. The goal was to assess both the benefits and hidden risks of early digital exposure.
-        </p>
+    <div id="image-modal" class="modal">
+        <span class="modal-close-btn">&times;</span>
+        <img class="modal-content" id="modal-image">
+        <div id="modal-caption"></div>
     </div>
-
-    <div class="project-section">
-        <h2 class="project-section-title">Methodology</h2>
-        <div class="project-features">
-            <div class="feature-card">
-                <h3 class="feature-title">Survey-Based</h3>
-                <p class="feature-desc">Interviewed 70+ students across 3 villages using structured and open-ended questions.</p>
-            </div>
-            <div class="feature-card">
-                <h3 class="feature-title">Parental Perspectives</h3>
-                <p class="feature-desc">Included responses from 20+ parents to compare adult perceptions of social media's role.</p>
-            </div>
-            <div class="feature-card">
-                <h3 class="feature-title">Offline + Observational</h3>
-                <p class="feature-desc">Used direct observations and informal chats to understand context and behavior patterns.</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="project-section">
-        <h2 class="project-section-title">Key Findings</h2>
-        <div class="project-features">
-            <div class="feature-card">
-                <i class="fas fa-chart-bar feature-icon"></i>
-                <h3 class="feature-title">Digital Curiosity</h3>
-                <p class="feature-desc">
-                    87% of kids interviewed had used YouTube, mostly for entertainment — but many also watched educational content like DIY science.
-                </p>
-            </div>
-
-            <div class="feature-card">
-                <i class="fas fa-clock feature-icon"></i>
-                <h3 class="feature-title">Screen Time</h3>
-                <p class="feature-desc">
-                    Average screen time ranged from 1.5 to 4 hours per day, often without parental supervision or structure.
-                </p>
-            </div>
-
-            <div class="feature-card">
-                <i class="fas fa-brain feature-icon"></i>
-                <h3 class="feature-title">Aspirational Shift</h3>
-                <p class="feature-desc">
-                    Some children wanted to become vloggers or gamers — showing how online role models are reshaping ambitions.
-                </p>
-            </div>
-
-            <div class="feature-card">
-                <i class="fas fa-question-circle feature-icon"></i>
-                <h3 class="feature-title">Awareness Gap</h3>
-                <p class="feature-desc">
-                    Majority lacked awareness of digital addiction, misinformation, or online safety practices.
-                </p>
-            </div>
-        </div>
-    </div>
-
-    <div class="project-section">
-        <h2 class="project-section-title">Solutions & Impact</h2>
-        <p class="project-text">
-            The research concludes with practical recommendations: introducing basic digital literacy modules in rural schools, organizing community talks on healthy screen habits, and encouraging platforms like SolveMyIndia to spread awareness.
-        </p>
-        <p class="project-text">
-            This paper is being compiled into a formal journal submission and will also be available as a downloadable PDF for educators and civic tech platforms.
-        </p>
-    </div>
-
-    <div class="project-section">
-        <h2 class="project-section-title">Technologies & Tools</h2>
-        <div class="project-tech">
-            <span class="tech-item">Google Forms</span>
-            <span class="tech-item">Canva (Charts)</span>
-            <span class="tech-item">MS Word</span>
-            <span class="tech-item">Google Docs</span>
-            <span class="tech-item">Figma (Infographics)</span>
-        </div>
-
-        <div class="project-image">
-            <div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;color:#555;height:400px;">
-                uploading soon...
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Project Navigation -->
-    <div class="project-nav">
-        <a href="solvemyindia.html">
-            <i class="fas fa-arrow-left"></i> Previous Project: SolveMyIndia
-        </a>
-        <a href="rural-workshops.html">
-            Next Project <i class="fas fa-arrow-right"></i>
-        </a>
-    </div>
-
-
-    <script src="js/social-med.js"></script>
+    
+    <script src="js/script.js"></script>
 </body>
-
 </html>

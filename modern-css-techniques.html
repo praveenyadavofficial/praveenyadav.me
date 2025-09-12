@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern CSS Techniques for Better UI - Praveen Yadav</title>
+    <meta name="description" content="Exploring advanced CSS features like container queries, cascade layers, and modern layout techniques that are transforming how we build user interfaces.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="dark-theme">
+    <div class="custom-cursor"></div>
+
+    <div class="container-full-width">
+        <!-- Standard Frosted Glass Navbar -->
+        <header class="page-header">
+            <a href="index.html" class="header-logo">Praveen Yadav</a>
+            <nav class="header-nav">
+                <a href="index.html">Home</a>
+                <a href="projects.html">Projects</a>
+                <a href="blog.html" class="active">Blog</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+            <div class="header-actions">
+                <a href="https://github.com/praveenyadavofficial" target="_blank" aria-label="GitHub" class="social-icon"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/praveenyadavofficial/" target="_blank" aria-label="LinkedIn" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                <div class="separator"></div>
+                <button id="theme-toggle" class="theme-toggle button-3d" aria-label="Toggle theme">
+                    <i class="fas fa-sun"></i>
+                </button>
+            </div>
+        </header>
+
+        <main class="main-content-full">
+            <article class="blog-article-content">
+                <!-- Article Header -->
+                <header class="blog-article-header fade-in">
+                    <h1 class="blog-post-title">Modern CSS Techniques for Better UI</h1>
+                    <div class="blog-post-meta">
+                        <span class="author-name">By Praveen Yadav</span>
+                        <span class="meta-separator">·</span>
+                        <time datetime="2025-09-10">September 10, 2025</time>
+                        <span class="meta-separator">·</span>
+                        <span class="read-time"><i class="fas fa-clock"></i> 5 min read</span>
+                    </div>
+                    <span class="blog-card-category tech">Tech</span>
+                </header>
+
+                <!-- Article Hero Image -->
+                <figure class="blog-hero-image fade-in">
+                    <div class="project-image">
+                        <img src="images/project/css.png" alt="Abstract representation of modern CSS concepts.">
+                    </div>
+                </figure>
+
+                <!-- Article Body -->
+                <section class="blog-post-body fade-in">
+                    <p>The world of CSS is evolving faster than ever. For years, we relied on clever hacks and complex preprocessors to achieve layouts and component styles that are now becoming native to the browser. Let's dive into a few modern CSS features that are fundamentally changing how we approach building user interfaces.</p>
+                    
+                    <h2>1. Container Queries: The True Responsive Revolution</h2>
+                    <p>Media queries revolutionized responsive design by allowing us to adapt layouts to the viewport size. However, they fall short when it comes to components. A component might need to change its layout based on the space it's given, not the entire page width. This is where container queries come in.</p>
+                    <blockquote>With container queries, a component can finally be truly self-contained and reusable, adapting its own style based on the dimensions of its parent container.</blockquote>
+                    <p>Here's a simple example of a card component that switches from a vertical to a horizontal layout when its container has enough space:</p>
+<pre><code>/* style.css */
+.card-container {
+  container-type: inline-size;
+  container-name: card;
+}
+
+.card {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+/* When the container is wider than 400px... */
+@container card (min-width: 400px) {
+  .card {
+    grid-template-columns: 1fr 2fr;
+  }
+}</code></pre>
+
+                    <h2>2. Cascade Layers: Taming Specificity</h2>
+                    <p>Specificity wars have been a long-standing headache in large CSS codebases. You often end up with long, convoluted selectors or excessive `!important` rules just to override a style. Cascade Layers provide a definitive solution by allowing you to define explicit layers of precedence.</p>
+                    <p>Styles in a later-defined layer will always override styles from an earlier layer, regardless of selector specificity. This makes managing CSS from frameworks, themes, and your own components incredibly predictable.</p>
+<pre><code>/* Define the order of layers */
+@layer reset, framework, components, utilities;
+
+@layer framework {
+  /* Low-specificity styles from a framework */
+  .button {
+    padding: 1rem;
+  }
+}
+
+@layer components {
+  /* Your component-specific override */
+  .special-button {
+    padding: 1.5rem; /* This will always win */
+  }
+}</code></pre>
+
+                    <h2>3. The `:has()` Selector: The Parent Selector is Here</h2>
+                    <p>For years, developers have wished for a "parent selector." The `:has()` pseudo-class is that and so much more. It allows you to select an element based on the descendants it contains. This unlocks powerful new ways to style elements dynamically without needing JavaScript.</p>
+                    <ul>
+                        <li>Change a form layout if it contains an error message.</li>
+                        <li>Style a card differently if it contains an image.</li>
+                        <li>Adjust the grid column count based on the number of items.</li>
+                    </ul>
+                    <p>The possibilities are vast, reducing complexity and moving state-based styling from JavaScript directly into your CSS.</p>
+
+                </section>
+            </article>
+
+            <!-- Blog Navigation -->
+            <nav class="blog-navigation fade-in">
+                <a href="#" class="nav-button button-3d prev">
+                    <i class="fas fa-arrow-left"></i> Previous Article
+                </a>
+                <a href="blog.html" class="back-to-archive">
+                    <i class="fas fa-th-large"></i> Back to Blog Archive
+                </a>
+                <a href="#" class="nav-button button-3d next">
+                    Next Article <i class="fas fa-arrow-right"></i>
+                </a>
+            </nav>
+        </main>
+    </div>
+    
+    <script src="js/script.js"></script>
+</body>
+</html>
