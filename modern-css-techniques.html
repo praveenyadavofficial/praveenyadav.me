@@ -1,17 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Modern CSS Techniques for Better UI - Praveen Yadav</title>
-    <meta name="description" content="Exploring advanced CSS features like container queries, cascade layers, and modern layout techniques that are transforming how we build user interfaces.">
-    
+    <meta name="description"
+        content="Exploring advanced CSS features like container queries, cascade layers, and modern layout techniques that are transforming how we build user interfaces.">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="MyWebSite" />
+    <link rel="manifest" href="/site.webmanifest" />
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body class="dark-theme">
     <div class="custom-cursor"></div>
 
@@ -26,8 +36,10 @@
                 <a href="contact.html">Contact</a>
             </nav>
             <div class="header-actions">
-                <a href="https://github.com/praveenyadavofficial" target="_blank" aria-label="GitHub" class="social-icon"><i class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/praveenyadavofficial/" target="_blank" aria-label="LinkedIn" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://github.com/praveenyadavofficial" target="_blank" aria-label="GitHub"
+                    class="social-icon"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/praveenyadavofficial/" target="_blank" aria-label="LinkedIn"
+                    class="social-icon"><i class="fab fa-linkedin-in"></i></a>
                 <div class="separator"></div>
                 <button id="theme-toggle" class="theme-toggle button-3d" aria-label="Toggle theme">
                     <i class="fas fa-sun"></i>
@@ -59,13 +71,21 @@
 
                 <!-- Article Body -->
                 <section class="blog-post-body fade-in">
-                    <p>The world of CSS is evolving faster than ever. For years, we relied on clever hacks and complex preprocessors to achieve layouts and component styles that are now becoming native to the browser. Let's dive into a few modern CSS features that are fundamentally changing how we approach building user interfaces.</p>
-                    
+                    <p>The world of CSS is evolving faster than ever. For years, we relied on clever hacks and complex
+                        preprocessors to achieve layouts and component styles that are now becoming native to the
+                        browser. Let's dive into a few modern CSS features that are fundamentally changing how we
+                        approach building user interfaces.</p>
+
                     <h2>1. Container Queries: The True Responsive Revolution</h2>
-                    <p>Media queries revolutionized responsive design by allowing us to adapt layouts to the viewport size. However, they fall short when it comes to components. A component might need to change its layout based on the space it's given, not the entire page width. This is where container queries come in.</p>
-                    <blockquote>With container queries, a component can finally be truly self-contained and reusable, adapting its own style based on the dimensions of its parent container.</blockquote>
-                    <p>Here's a simple example of a card component that switches from a vertical to a horizontal layout when its container has enough space:</p>
-<pre><code>/* style.css */
+                    <p>Media queries revolutionized responsive design by allowing us to adapt layouts to the viewport
+                        size. However, they fall short when it comes to components. A component might need to change its
+                        layout based on the space it's given, not the entire page width. This is where container queries
+                        come in.</p>
+                    <blockquote>With container queries, a component can finally be truly self-contained and reusable,
+                        adapting its own style based on the dimensions of its parent container.</blockquote>
+                    <p>Here's a simple example of a card component that switches from a vertical to a horizontal layout
+                        when its container has enough space:</p>
+                    <pre><code>/* style.css */
 .card-container {
   container-type: inline-size;
   container-name: card;
@@ -85,9 +105,14 @@
 }</code></pre>
 
                     <h2>2. Cascade Layers: Taming Specificity</h2>
-                    <p>Specificity wars have been a long-standing headache in large CSS codebases. You often end up with long, convoluted selectors or excessive `!important` rules just to override a style. Cascade Layers provide a definitive solution by allowing you to define explicit layers of precedence.</p>
-                    <p>Styles in a later-defined layer will always override styles from an earlier layer, regardless of selector specificity. This makes managing CSS from frameworks, themes, and your own components incredibly predictable.</p>
-<pre><code>/* Define the order of layers */
+                    <p>Specificity wars have been a long-standing headache in large CSS codebases. You often end up with
+                        long, convoluted selectors or excessive `!important` rules just to override a style. Cascade
+                        Layers provide a definitive solution by allowing you to define explicit layers of precedence.
+                    </p>
+                    <p>Styles in a later-defined layer will always override styles from an earlier layer, regardless of
+                        selector specificity. This makes managing CSS from frameworks, themes, and your own components
+                        incredibly predictable.</p>
+                    <pre><code>/* Define the order of layers */
 @layer reset, framework, components, utilities;
 
 @layer framework {
@@ -105,13 +130,16 @@
 }</code></pre>
 
                     <h2>3. The `:has()` Selector: The Parent Selector is Here</h2>
-                    <p>For years, developers have wished for a "parent selector." The `:has()` pseudo-class is that and so much more. It allows you to select an element based on the descendants it contains. This unlocks powerful new ways to style elements dynamically without needing JavaScript.</p>
+                    <p>For years, developers have wished for a "parent selector." The `:has()` pseudo-class is that and
+                        so much more. It allows you to select an element based on the descendants it contains. This
+                        unlocks powerful new ways to style elements dynamically without needing JavaScript.</p>
                     <ul>
                         <li>Change a form layout if it contains an error message.</li>
                         <li>Style a card differently if it contains an image.</li>
                         <li>Adjust the grid column count based on the number of items.</li>
                     </ul>
-                    <p>The possibilities are vast, reducing complexity and moving state-based styling from JavaScript directly into your CSS.</p>
+                    <p>The possibilities are vast, reducing complexity and moving state-based styling from JavaScript
+                        directly into your CSS.</p>
 
                 </section>
             </article>
@@ -130,7 +158,8 @@
             </nav>
         </main>
     </div>
-    
+
     <script src="js/script.js"></script>
 </body>
+
 </html>
