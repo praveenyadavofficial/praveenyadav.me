@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avoneme Creative Studio - Project Details</title>
+    <meta name="description" content="Case study for the Avoneme Creative Studio web platform, designed and developed by Praveen Yadav.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="dark-theme">
+    <div class="custom-cursor"></div>
+
+    <div class="container-full-width">
+        <header class="page-header">
+            <a href="/" class="header-logo">Praveen Yadav</a>
+            <nav class="header-nav">
+                <a href="/">Home</a>
+                <a href="/projects/" class="active">Projects</a>
+                <a href="/blog/">Blog</a>
+                <a href="/Praveen_Yadav_Resume.pdf" target="_blank">Résumé</a>
+            </nav>
+            <div class="header-actions">
+                <a href="https://github.com/praveenyadav-admin" target="_blank" aria-label="GitHub" class="social-icon"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/praveen-yadav333/" target="_blank" aria-label="LinkedIn" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                <div class="separator"></div>
+                <button id="theme-toggle" class="theme-toggle button-3d" aria-label="Toggle theme">
+                    <i class="fas fa-sun"></i>
+                </button>
+            </div>
+        </header>
+
+        <main class="main-content-full">
+            <article class="project-page-content">
+                <section class="project-hero fade-in">
+                    <div class="project-hero-text">
+                        <h1 class="project-page-title">Avoneme Creative Studio</h1>
+                        <p class="project-page-tagline">A digital-first brand identity and dynamic web platform for a modern creative agency.</p>
+                    </div>
+                    <aside class="project-details-card">
+                        <div class="detail-item"><strong>Role:</strong> Creative Director & Lead Developer</div>
+                        <div class="detail-item"><strong>Date:</strong> 2025 — Present</div>
+                        <div class="detail-item"><strong>Tech Stack:</strong> React, Node.js, Figma, Framer Motion</div>
+                        <div class="detail-item"><strong>Status:</strong> <span class="status-badge status-in-progress">In Progress</span></div>
+                        <a href="#" class="project-live-link button-3d">Visit Live Site <i class="fas fa-external-link-alt"></i></a>
+                    </aside>
+                </section>
+
+                <figure class="project-main-image fade-in">
+                    <div class="project-image">
+                        <img src="/images/project/avoneme.jpg" alt="Homepage of Avoneme Creative Studio">
+                    </div>
+                    <figcaption>The hero section of the Avoneme homepage, designed for immediate visual impact.</figcaption>
+                </figure>
+
+                <section class="project-content-section fade-in">
+                    <h2>Project Overview</h2>
+                    <p>Avoneme is a startup creative agency requiring a powerful online presence to showcase their portfolio and acquire clients. My role encompassed the entire project lifecycle, from brand strategy and UI/UX design in Figma to full-stack development. The core challenge was to create a platform that was not just a static portfolio but an interactive experience reflecting the agency's creativity and technical skill.</p>
+                    
+                    <h2>Key Features</h2>
+                    <ul>
+                        <li><strong>Dynamic Service Showcase:</strong> An interactive section detailing the agency's offerings, using animations to engage users.</li>
+                        <li><strong>Filterable Portfolio Gallery:</strong> A performant React-based gallery with smooth transitions and lazy-loaded images to handle a growing body of work.</li>
+                        <li><strong>Client Inquiry System:</strong> A multi-step form connected to a Node.js backend that captures detailed client requirements and automates initial communication.</li>
+                    </ul>
+
+                    <h2>Design and Development</h2>
+                    <p>The process began with wireframing in Figma to map user flows for potential clients. We chose a minimalist aesthetic to ensure the creative work was the star. For development, a React frontend provided the required interactivity, while an Express.js server handles API requests and form submissions, creating a robust and scalable foundation.</p>
+                </section>
+
+                <section class="project-gallery fade-in">
+                    <h2>Visual Gallery</h2>
+                    <div class="gallery-grid">
+                        <figure class="project-image">
+                            <img src="/images/project/e-com.png" alt="Avoneme's portfolio detail page design">
+                        </figure>
+                        <figure class="project-image">
+                            <img src="/images/project/ngo-man.png" alt="Wireframes and user flow diagram in Figma">
+                        </figure>
+                    </div>
+                </section>
+            </article>
+
+            <nav class="project-navigation fade-in">
+                <a href="/project/solvemyindia/" class="nav-button button-3d prev">
+                    <i class="fas fa-arrow-left"></i> Previous Project
+                </a>
+                <a href="/projects/" class="back-to-archive">
+                    <i class="fas fa-th-large"></i> Back to Archive
+                </a>
+                <a href="/project/social-media-impact/" class="nav-button button-3d next">
+                    Next Project <i class="fas fa-arrow-right"></i>
+                </a>
+            </nav>
+        </main>
+    </div>
+
+    <div id="image-modal" class="modal">
+        <span class="modal-close-btn">&times;</span>
+        <img class="modal-content" id="modal-image">
+        <div id="modal-caption"></div>
+    </div>
+    
+    <script src="/js/script.js"></script>
+    <script src="/js/cursor.js"></script>
+    <script src="/js/theme-toggle.js"></script>
+</body>
+</html>

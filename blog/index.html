@@ -10,20 +10,27 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="css/style.css">
+    
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="MyWebSite" />
+    <link rel="manifest" href="/site.webmanifest" />
+    
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 <body class="dark-theme">
     <div class="custom-cursor"></div>
 
     <div class="container-full-width">
-        <!-- Navbar is unchanged -->
         <header class="page-header">
-            <a href="index.html" class="header-logo">Praveen Yadav</a>
+            <a href="/" class="header-logo">Praveen Yadav</a>
             <nav class="header-nav">
-                <a href="index.html">Home</a>
-                <a href="projects.html">Projects</a>
-                <a href="blog.html" class="active">Blog</a>
-                <a href="contact.html">Contact</a>
+                <a href="/">Home</a>
+                <a href="/projects/">Projects</a>
+                <a href="/blog/" class="active">Blog</a>
+                <a href="/contact/">Contact</a>
             </nav>
             <div class="header-actions">
                 <a href="https://github.com/praveenyadavofficial" target="_blank" aria-label="GitHub" class="social-icon"><i class="fab fa-github"></i></a>
@@ -41,7 +48,6 @@
                 <p class="page-description">Thoughts on development, design, and the ever-evolving landscape of technology.</p>
             </div>
 
-            <!-- Filters and search are unchanged -->
             <div class="blog-controls fade-in">
                 <div class="blog-filters">
                     <a href="#" class="blog-filter-link active" data-filter="all">All</a>
@@ -55,13 +61,11 @@
                 </div>
             </div>
 
-            <!-- NEW Redesigned Blog List Layout -->
             <div class="blog-post-list" id="blogPostsContainer">
-                <!-- Post 1 -->
-                <a href="modern-css-techniques.html" class="blog-card-link fade-in">
+                <a href="/blogs/modern-css-techniques/" class="blog-card-link fade-in">
                     <div class="blog-post-card" data-category="tech">
                         <div class="blog-post-card-image">
-                            <img src="images/project/css.png" alt="Abstract visualization of code on a screen">
+                            <img src="/images/project/css.png" alt="Abstract visualization of code on a screen">
                         </div>
                         <div class="blog-post-card-content">
                             <div class="blog-card-meta">
@@ -76,14 +80,13 @@
                     </div>
                 </a>
 
-                <!-- Post 2 -->
-                <a href="design-systems-scale.html" class="blog-card-link fade-in">
+                <a href="/blogs/design-systems-scale/" class="blog-card-link fade-in">
                     <div class="blog-post-card" data-category="design">
                         <div class="blog-post-card-image">
-                            <img src="images/project/designsystem1.png" alt="Abstract representation of a design system.">
+                            <img src="/images/project/designsystem1.png" alt="Abstract representation of a design system.">
                         </div>
                         <div class="blog-post-card-content">
-                             <div class="blog-card-meta">
+                            <div class="blog-card-meta">
                                 <span class="blog-card-category design">Design</span>
                                 <span class="meta-separator">·</span>
                                 <span class="blog-card-date">August 28, 2025</span>
@@ -95,14 +98,13 @@
                     </div>
                 </a>
 
-                <!-- Post 3 -->
-                <a href="varanasi-tech-scene.html" class="blog-card-link fade-in">
+                <a href="/blogs/varanasi-tech-scene/" class="blog-card-link fade-in">
                     <div class="blog-post-card" data-category="local">
                         <div class="blog-post-card-image">
-                            <img src="images/project/varanasi-tech-scene.png" alt="Stylized image blending traditional Varanasi ghats with digital code.">
+                            <img src="/images/project/varanasi-tech-scene.png" alt="Stylized image blending traditional Varanasi ghats with digital code.">
                         </div>
                         <div class="blog-post-card-content">
-                             <div class="blog-card-meta">
+                            <div class="blog-card-meta">
                                 <span class="blog-card-category local">Local</span>
                                 <span class="meta-separator">·</span>
                                 <span class="blog-card-date">August 15, 2025</span>
@@ -115,7 +117,6 @@
                 </a>
             </div>
 
-            <!-- No Results Message -->
             <div class="no-results" id="noResultsMessage" style="display: none;">
                 <h3>No posts found</h3>
                 <p>Try adjusting your search or filter.</p>
@@ -129,6 +130,8 @@
         <div id="modal-caption"></div>
     </div>
     
-    <script src="js/script.js"></script>
+    <script src="/js/script.js"></script>
+    <script src="/js/cursor.js"></script>
+    <script src="/js/theme-toggle.js"></script>
 </body>
 </html>
